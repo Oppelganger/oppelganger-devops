@@ -19,8 +19,8 @@ services:
       S3_BUCKET_VIDEOS: videos-bucket
       S3_BUCKET_PERSONALITIES: personalities-bucket
       S3_REGION_NAME: us-east-1
-      S3_ACCESS_KEY_ID: OW2AJGTDgdv6VCfOZdR2
-      S3_SECRET_ACCESS_KEY: Vb2FJ2eOC1RyV0ZaLVFWcrrqWwzO3YtnNJFbIs9i
+      S3_ACCESS_KEY_ID: root
+      S3_SECRET_ACCESS_KEY: password0
     networks:
       - bridge
     deploy:
@@ -29,7 +29,7 @@ services:
           devices:
             - driver: nvidia
               count: 1
-              capabilities: [gpu]
+              capabilities: [gpu, video]
 
   minio:
     user: root
