@@ -44,6 +44,7 @@ services:
       MINIO_ROOT_USER: root
       MINIO_ROOT_PASSWORD: password0
       MINIO_DEFAULT_BUCKETS: videos-bucket,personalities-bucket
+      MINIO_API_CORS_ALLOW_ORIGIN: '*'
     restart: unless-stopped
     networks:
       - bridge
